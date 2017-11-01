@@ -33,8 +33,8 @@ export const findEvent = (req, res) => {
 export const updateEvent = (req, res) => {
   const { body: { fields, eventId }} = req;
   
-  Event.findByIdAndUpdate(eventId, { ...fields }, (err) => {
-    res.send('Event successfully updated.');
+  Event.findByIdAndUpdate(eventId, { ...fields }, (err, result) => {
+    res.json(result);
   })
 }
 
