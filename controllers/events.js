@@ -9,7 +9,6 @@ const index = (req, res) => {
 export const addEvent = (req, res) => {
   const { body: { title, location, date }} = req;
   
-  
   const event = new Event({ title, date, location });
   
   event.save(function (err) {
@@ -19,6 +18,24 @@ export const addEvent = (req, res) => {
       res.send('Event successfully created.');
     }
   });
+}
+
+export const findEvent = (req, res) => {
+  const { params: { eventId } } = req;
+  Event.findById(eventId, function (err, doc) {
+    if (err) {
+      res.status('500').send('Could not find event.');
+    }
+    res.json(doc);
+  });
+}
+
+export const updateEvent = (req, res) => {
+  const { body: { fields, eventId }} = req;
+  
+  Event.findByIdAndUpdate(eventId, { ...fields }, (err) => {
+    res.send('Event successfully updated.');
+  })
 }
 
 export default index;
