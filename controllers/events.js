@@ -20,7 +20,7 @@ export const addEvent = (req, res) => {
   });
 }
 
-export const findEvent = (req, res) => {
+export const getEvent = (req, res) => {
   const { params: { eventId } } = req;
   Event.findById(eventId, function (err, doc) {
     if (err) {
@@ -31,7 +31,7 @@ export const findEvent = (req, res) => {
 }
 
 export const updateEvent = (req, res) => {
-  const { body: { fields, eventId }} = req;
+  const { body: { fields }, params: { eventId }} = req;
   
   Event.findByIdAndUpdate(eventId, { ...fields }, (err, result) => {
     res.json(result);
