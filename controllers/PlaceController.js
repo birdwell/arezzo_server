@@ -1,5 +1,7 @@
-import Event from '../model/Event';
+//import Event from '../model/Event';
+import Place from '../model/Place';
 
+//Arguments: request, response
 const index = (req, res) => {
   Event.find({}, null, {}, (err, events) => (
     res.json(events)
