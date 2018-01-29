@@ -1,43 +1,75 @@
-//import Event from '../model/Event';
+// v.0.0.1
+// Author: Emily Black
+// Date: 1/25/18
+
 import Place from '../model/Place';
 
 //Arguments: request, response
 const index = (req, res) => {
-  Event.find({}, null, {}, (err, events) => (
-    res.json(events)
+  Place.find({}, null, {}, (err, places) => (
+    res.json(places)
   ));
 };
 
-export const addEvent = (req, res) => {
-  const { body: { title, location, date }} = req;
+//Adds a new place
+export const addPlace = (req, res) => {
+  //Defines what the DB requests
+  const { body: { fields }} = req; //MIGHT NEED TO CHANGE THIS
   
-  const event = new Event({ title, date, location });
+  const newPlace = new Place({ fields }); //MIGHT NEED TO CHANGE THIS
   
-  event.save(function (err) {
+  newPlace.save(function (err) {
     if (err) {
-      res.sendStatus(500);
+      res.sendStatus(500).send('Could not add place.'); //throws a server side error
     } else {
-      res.send('Event successfully created.');
+      res.send('Place successfully created.');
     }
   });
 }
 
-export const getEvent = (req, res) => {
-  const { params: { eventId } } = req;
-  Event.findById(eventId, function (err, doc) {
+//Gets a place given a placeID
+export const getPlace = (req, res) => {
+  //Defines what the DB requests
+  const { params: { placeId } } = req;
+
+  Place.findById(placeId, function (err, doc) {
     if (err) {
-      res.status('500').send('Could not find event.');
+      res.status('500').send('Could not find place.'); //throws a server side error
     }
-    res.json(doc);
-  });
+    else {
+      res.json(doc); //returns a document with the given place
+    }
+  })
 }
 
-export const updateEvent = (req, res) => {
-  const { body: { fields }, params: { eventId }} = req;
+//Updates a places info
+export const updatePlace = (req, res) => {
+  //Defines what the DB requests
+  const { body: { fields }, params: { placeId }} = req;
   
-  Event.findByIdAndUpdate(eventId, { ...fields }, (err, result) => {
-    res.json(result);
+  Place.findByIdAndUpdate(placeId, { fields }, (err, result) => {
+    if (err) {
+      res.status('500').send('Could not update place.'); //throws a server side error
+    }
+    else {
+      res.json(result);
+    }
   })
+}
+
+//Deletes a place given an ID
+export const deletePlace = (req, res) => {
+  //Defines what the DB requests
+  const { params: { placeId } } = req;
+
+  Place.findByIdAndRemove(placeId, (err, result) => {
+    if (err) {
+      res.status('500').send('Could not find place.'); //throws a server side error
+    }
+    else {
+      res.json(result);
+    }
+  });
 }
 
 export default index;
