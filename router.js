@@ -13,14 +13,14 @@ const router = Router();
 //DELETE = deletes data
 
 // This route gets a specific place, updates a specific place, deletes a specific place
-router.route('/PlaceController/:placeId')
+router.route('/place/:placeId')
   .get(getPlace)
   .put(updatePlace)
   .delete(deletePlace);
 
 // This route gets all places, adds data
-router.route('/PlaceController')
-  .get(index)
+router.route('/place')
+  .get(PlaceController)
   .post(addPlace);
 
 export default router;
