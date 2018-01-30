@@ -3,10 +3,7 @@
 // Date: 1/29/18
 
 import mongoose, { Schema } from 'mongoose';
-<<<<<<< HEAD
-=======
 // import { ObjectId } from '../../../../Library/Caches/typescript/2.6/node_modules/@types/bson';
->>>>>>> b9dd3d5452b1159bfc357923df91572dde2d6ae8
 
 // Test event schema
 // Author: Josh Birdwell
