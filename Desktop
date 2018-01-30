@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@5.6.0
+3 info using node@v8.9.4
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle arezzo_server@1.0.0~prestart: arezzo_server@1.0.0
+6 info lifecycle arezzo_server@1.0.0~start: arezzo_server@1.0.0
+7 verbose lifecycle arezzo_server@1.0.0~start: unsafe-perm in lifecycle true
+8 verbose lifecycle arezzo_server@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/emilyblack95/Desktop/Capstone/arezzo_server/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/ant/bin
+9 verbose lifecycle arezzo_server@1.0.0~start: CWD: /Users/emilyblack95/Desktop/Capstone/arezzo_server
+10 silly lifecycle arezzo_server@1.0.0~start: Args: [ '-c', './node_modules/babel-cli/bin/babel-node.js index.js' ]
+11 silly lifecycle arezzo_server@1.0.0~start: Returned: code: 1  signal: null
+12 info lifecycle arezzo_server@1.0.0~start: Failed to exec start script
+13 verbose stack Error: arezzo_server@1.0.0 start: `./node_modules/babel-cli/bin/babel-node.js index.js`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:285:16)
+13 verbose stack     at emitTwo (events.js:126:13)
+13 verbose stack     at EventEmitter.emit (events.js:214:7)
+13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+13 verbose stack     at emitTwo (events.js:126:13)
+13 verbose stack     at ChildProcess.emit (events.js:214:7)
+13 verbose stack     at maybeClose (internal/child_process.js:925:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+14 verbose pkgid arezzo_server@1.0.0
+15 verbose cwd /Users/emilyblack95/Desktop/Capstone/arezzo_server
+16 verbose Darwin 17.4.0
+17 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+18 verbose node v8.9.4
+19 verbose npm  v5.6.0
+20 error code ELIFECYCLE
+21 error errno 1
+22 error arezzo_server@1.0.0 start: `./node_modules/babel-cli/bin/babel-node.js index.js`
+22 error Exit status 1
+23 error Failed at the arezzo_server@1.0.0 start script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]

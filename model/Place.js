@@ -1,9 +1,8 @@
 // v.0.0.1
 // Author: Emily Black
-// Date: 1/23/18
+// Date: 1/29/18
 
 import mongoose, { Schema } from 'mongoose';
-import { ObjectId } from '../../../../Library/Caches/typescript/2.6/node_modules/@types/bson';
 
 // Test event schema
 // Author: Josh Birdwell
@@ -19,27 +18,27 @@ import { ObjectId } from '../../../../Library/Caches/typescript/2.6/node_modules
 // accessibility, imgs subject to change.
 // _id is the default key for Place
 const placeSchema = new Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
+  title: String,
+  description: String,
   location: {
-    lat: { type: Number, required: true },
-    long: { type: Number, required: true }
+    lat: Number,
+    long: Number,
   },
   hours: {
-    openHour: { type: Number, required: true },
-    closeHour: { type: Number, required: true }
+    openHour: Number,
+    closeHour: Number,
   },
-  price: { type: Number, required: true },
+  price: Number,
   imgs: [ ],
   contact_info: {
     phone_num: Number,
-    address: { type: String, required: true },
+    address: String,
     website: String,
     media_links: [{ link: String }]
   },
   suggested_age: Number,
-  payment_options: [{ type: String, required: true }],
-  lang_avail: [{ language: { type: String, required: true } }],
+  payment_options: [{ type: String }],
+  lang_avail: [{ language: String }],
   restrictions: [{ name: String }],
   wifi: Boolean,
   accessibility: Boolean,
@@ -65,11 +64,11 @@ var SightPlace = Place.discriminator('Sight', new Schema({
 }));
 
 var EventPlace = Place.discriminator('Event', new Schema({
-  dates: { start_date: { type: Date, required: true }, end_date: { type: Date, required: true } }
+  dates: { start_date: Date, end_date: Date }
 }));
 
 var FoodPlace = Place.discriminator('Food', new Schema({
-  cuisine: { type: String, required: true }, atmosphere: String
+  cuisine: String, atmosphere: String
 }));
 
 // Test export event schema
