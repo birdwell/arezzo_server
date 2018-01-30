@@ -2,7 +2,7 @@
 // Author: Emily Black
 // Date: 1/25/18
 
-import Place from '../model/Place';
+import {Place} from '../model/Place';
 
 //Arguments: request, response
 const index = (req, res) => {
