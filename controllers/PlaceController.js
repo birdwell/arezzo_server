@@ -2,7 +2,11 @@
 // Author: Emily Black
 // Date: 1/25/18
 
+<<<<<<< HEAD
 import { Place } from '../model/Place';
+=======
+import {Place} from '../model/Place';
+>>>>>>> 15807d51648a985aa849b4c954547386d5f52ce8
 
 //Gets all places
 const index = (req, res) => {
