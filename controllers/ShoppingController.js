@@ -4,9 +4,9 @@
 
 import ShoppingPlace from '../model/Place';
 
-//Arguments: request, response
+//Gets all shopping places
 const index = (req, res) => {
-    ShoppingPlace.find({}, null, {}, (err, places) => (
+  ShoppingPlace.find({}, null, {}, (err, places) => (
     res.json(places)
   ));
 };
@@ -14,10 +14,12 @@ const index = (req, res) => {
 //Adds a new shopping place
 export const addShoppingPlace = (req, res) => {
   //Defines what the DB requests
-  const { body: { fields }} = req; //MIGHT NEED TO CHANGE THIS
+  const { body: { title, description, location, lat, long, openHour, closeHour, price, imgs, phone_num, address, website, media_links, suggested_age, payment_options, lang_avail, restrictions, wifi, accessibility, visitDuration, typeOfShopping }} = req; //MIGHT NEED TO CHANGE THIS
   
-  const newShoppingPlace = new ShoppingPlace({ fields }); //MIGHT NEED TO CHANGE THIS
+  const newShoppingPlace = new ShoppingPlace({ title, description, location, lat, long, openHour, closeHour, price, imgs, phone_num, address, website, media_links, suggested_age, payment_options, lang_avail, restrictions, wifi, accessibility, visitDuration, typeOfShopping }); //MIGHT NEED TO CHANGE THIS
   
+  //assert.equal(newShoppingPlace.kind, 'Shopping'); //Sets the discriminator key, MIGHT NOT WORK
+
   newShoppingPlace.save(function (err) {
     if (err) {
       res.sendStatus(500).send('Could not add shopping place.'); //throws a server side error
@@ -47,7 +49,7 @@ export const updateShoppingPlace = (req, res) => {
   //Defines what the DB requests
   const { body: { fields }, params: { placeId }} = req;
   
-  ShoppingPlace.findByIdAndUpdate(placeId, { fields }, (err, result) => {
+  ShoppingPlace.findByIdAndUpdate(placeId, { ...fields }, (err, result) => {
     if (err) {
       res.status('500').send('Could not update shopping place.'); //throws a server side error
     }

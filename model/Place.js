@@ -3,10 +3,6 @@
 // Date: 1/29/18
 
 import mongoose, { Schema } from 'mongoose';
-<<<<<<< HEAD
-=======
-// import { ObjectId } from '../../../../Library/Caches/typescript/2.6/node_modules/@types/bson';
->>>>>>> b9dd3d5452b1159bfc357923df91572dde2d6ae8
 
 // Test event schema
 // Author: Josh Birdwell
@@ -18,43 +14,45 @@ import mongoose, { Schema } from 'mongoose';
  // lat: Number
  //});
 
-// Place schema. 
-// accessibility, imgs subject to change.
-// _id is the default key for Place
+//Might not need to create a discriminator key
+//tells mongoose to add a path to the schema called 'kind' and use it to track which type of document this is
+// var options = { discriminatorKey: 'kind' };
+
+//Place schema. 
+//accessibility, imgs subject to change.
+//_id is the default key for Place
 const placeSchema = new Schema({
-  title: String,
-  description: String,
-  location: {
-    lat: Number,
-    long: Number,
-  },
+  title: { type: String, required: true },
+  description: { type: String, required: true },
+  location: { type: String, required: true },
+  lat: { type: Number, required: true },
+  long: { type: Number, required: true },
   hours: {
-    openHour: Number,
-    closeHour: Number,
+    openHour: { type: Number, required: true },
+    closeHour: { type: Number, required: true },
   },
-  price: Number,
+  price: { type: Number, required: true },
   imgs: [ ],
   contact_info: {
-    phone_num: Number,
-    address: String,
+    phone_num: String,
+    address: { type: String, required: true },
     website: String,
     media_links: [{ link: String }]
   },
-  suggested_age: Number,
-  payment_options: [{ type: String }],
-  lang_avail: [{ language: String }],
-  restrictions: [{ name: String }],
+  suggested_age: { type: String, required: true },
+  payment_options: [{ type: String, required: true }],
+  lang_avail: [{ language: { type: String, required: true }}],
+  restrictions: [{ name: { type: String, required: true }}],
   wifi: Boolean,
   accessibility: Boolean,
   visitDuration: Number
 });
 
-// Create the model for the PLACE schema.
+// Create the model for the discriminators.
 var Place = mongoose.model('Place', placeSchema);
 
-// Creates a new model/schema based off of the PLACE model, which is based off of the PLACE schema.
-// Discriminators are a schema inheritance mechanism.
-// __t is by default the discriminator key, which is a string path
+//Creates a new model/schema based off of the PLACE model, which is based off of the PLACE schema.
+//Discriminators are a schema inheritance mechanism.
 var ShoppingPlace = Place.discriminator('Shopping', new Schema({
   typeOfShopping: String
 }));
@@ -79,8 +77,8 @@ var FoodPlace = Place.discriminator('Food', new Schema({
 // Author: Josh Birdwell
 //export default model('event', eventSchema, 'events');
 
-// Export the mongoose model
-// Model: field name
+//Export the mongoose model
+//Model: field, name
 module.exports = {
   Place: Place, 
   ShoppingPlace: ShoppingPlace, 
