@@ -3,10 +3,7 @@
 // Date: 1/29/18
 
 import mongoose, { Schema } from 'mongoose';
-<<<<<<< HEAD
-=======
 // import { ObjectId } from '../../../../Library/Caches/typescript/2.6/node_modules/@types/bson';
->>>>>>> 15807d51648a985aa849b4c954547386d5f52ce8
 
 // Test event schema
 // Author: Josh Birdwell
@@ -41,12 +38,12 @@ const placeSchema = new Schema({
     phone_num: String,
     address: { type: String, required: true },
     website: String,
-    media_links: [{ link: String }]
+    media_links: [String]
   },
   suggested_age: { type: String, required: true },
   payment_options: [{ type: String, required: true }],
-  lang_avail: [{ language: { type: String, required: true }}],
-  restrictions: [{ name: { type: String, required: true }}],
+  lang_avail: [{ type: String, required: true }],
+  restrictions: [{ type: String, required: true }],
   wifi: Boolean,
   accessibility: Boolean,
   visitDuration: Number

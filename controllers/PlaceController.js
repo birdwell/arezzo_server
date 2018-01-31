@@ -2,11 +2,7 @@
 // Author: Emily Black
 // Date: 1/25/18
 
-<<<<<<< HEAD
-import { Place } from '../model/Place';
-=======
 import {Place} from '../model/Place';
->>>>>>> 15807d51648a985aa849b4c954547386d5f52ce8
 
 //Gets all places
 const index = (req, res) => {
@@ -18,15 +14,14 @@ const index = (req, res) => {
 //Adds a new place
 export const addPlace = (req, res) => {
   //Defines what the DB requests
-  const { body: { title, description, location, lat, long, openHour, closeHour, price, imgs, phone_num, address, website, media_links, suggested_age, payment_options, lang_avail, restrictions, wifi, accessibility, visitDuration }} = req;
-  
-  const newPlace = new Place({ title, description, location, lat, long, openHour, closeHour, price, imgs, phone_num, address, website, media_links, suggested_age, payment_options, lang_avail, restrictions, wifi, accessibility, visitDuration });
+  const { body } = req;
+  const newPlace = new Place({ ...body });
   
   //assert.equal(newPlace.kind, 'Place'); //Sets the discriminator key, MIGHT NOT WORK
 
-  newPlace.save(function (err) {
+  newPlace.save(err => {
     if (err) {
-      res.sendStatus(500); //throws a server side error
+      res.sendStatus(500).send(err.message); //throws a server side error
     } else {
       res.send('Place successfully created.');
     }
