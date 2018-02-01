@@ -1,6 +1,6 @@
 // v.0.0.1
 // Author: Emily Black
-// Date: 1/25/18
+// Date: 1/31/18
 
 import {Place} from '../model/Place';
 
@@ -44,9 +44,10 @@ export const getPlace = (req, res) => {
 //Updates a places info
 export const updatePlace = (req, res) => {
   //Defines what the DB requests
-  const { body: { fields}, params: { placeId }} = req;
+  // a = { 'foo': 'bar' }
+  const { body: fields , params: { placeId }} = req;
   
-  Place.findByIdAndUpdate(placeId, { ...fields }, (err, result) => {
+  Place.findByIdAndUpdate(placeId, { ...fields }, {new: true}, (err, result) => {
     res.json(result);
   })
 }

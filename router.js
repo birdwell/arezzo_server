@@ -18,7 +18,7 @@ const router = Router();
 //This route gets a specific place, updates a specific place, deletes a specific place
 router.route('/place/:placeId')
   .get(getPlace) //WORKS
-  .put(updatePlace) 
+  .put(updatePlace) //WORKS
   .delete(deletePlace); //WORKS
 
 //This route gets all places, adds a place
