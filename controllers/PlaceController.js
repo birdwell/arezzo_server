@@ -16,8 +16,6 @@ export const addPlace = (req, res) => {
   //Defines what the DB requests
   const { body } = req;
   const newPlace = new Place({ ...body });
-  
-  //assert.equal(newPlace.kind, 'Place'); //Sets the discriminator key, MIGHT NOT WORK
 
   newPlace.save(err => {
     if (err) {
@@ -46,7 +44,7 @@ export const getPlace = (req, res) => {
 //Updates a places info
 export const updatePlace = (req, res) => {
   //Defines what the DB requests
-  const { body: { fields }, params: { placeId }} = req;
+  const { body: { fields}, params: { placeId }} = req;
   
   Place.findByIdAndUpdate(placeId, { ...fields }, (err, result) => {
     res.json(result);

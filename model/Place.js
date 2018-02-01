@@ -3,7 +3,6 @@
 // Date: 1/29/18
 
 import mongoose, { Schema } from 'mongoose';
-// import { ObjectId } from '../../../../Library/Caches/typescript/2.6/node_modules/@types/bson';
 
 // Test event schema
 // Author: Josh Birdwell
@@ -14,10 +13,6 @@ import mongoose, { Schema } from 'mongoose';
  // lng: Number,
  // lat: Number
  //});
-
-//Might not need to create a discriminator key
-//tells mongoose to add a path to the schema called 'kind' and use it to track which type of document this is
-// var options = { discriminatorKey: 'kind' };
 
 //Place schema. 
 //accessibility, imgs subject to change.
@@ -38,7 +33,7 @@ const placeSchema = new Schema({
     phone_num: String,
     address: { type: String, required: true },
     website: String,
-    media_links: [String]
+    media_links: [ String ]
   },
   suggested_age: { type: String, required: true },
   payment_options: [{ type: String, required: true }],
@@ -62,8 +57,9 @@ var OutdoorsPlace = Place.discriminator('Outdoors', new Schema({
   typeOfOutdoorsPlace: String, difficulty: String, distance: Number
 }));
 
+//If isIndoor is false, then its outdoors
 var SightPlace = Place.discriminator('Sight', new Schema({
-  typeOfSight: String, indoor_outdoor: String
+  typeOfSight: String, isIndoor: Boolean
 }));
 
 var EventPlace = Place.discriminator('Event', new Schema({
