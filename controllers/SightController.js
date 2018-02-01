@@ -19,7 +19,8 @@ export const addSightPlace = (req, res) => {
 
   newSightPlace.save(err => {
     if (err) {
-      res.sendStatus(500).send(err.message); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     } else {
       res.send('Sight successfully created.');
     }
@@ -33,7 +34,8 @@ export const getSightPlace = (req, res) => {
 
   SightPlace.findById(placeId, function (err, doc) {
     if (err) {
-      res.status('500').send('Could not find sight.'); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     }
     else {
       res.json(doc);
@@ -44,9 +46,9 @@ export const getSightPlace = (req, res) => {
 //Updates a sight places info
 export const updateSightPlace = (req, res) => {
   //Defines what the DB requests
-  const { body: { fields}, params: { placeId }} = req;
+  const { body: fields, params: { placeId }} = req;
   
-  SightPlace.findByIdAndUpdate(placeId, { ...fields }, (err, result) => {
+  SightPlace.findByIdAndUpdate(placeId, { ...fields }, {new: true}, (err, result) => {
     res.json(result);
   })
 }
@@ -58,7 +60,8 @@ export const deleteSightPlace = (req, res) => {
 
   SightPlace.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      res.status('500').send('Could not find sight.'); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     }
     else {
       res.json(result);

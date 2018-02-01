@@ -1,18 +1,13 @@
 // v.0.0.1
 // Author: Emily Black
-// Date: 1/29/18
+// Date: 2/1/18
+
+//Future work: figure out how to enforce discriminator attributes
 
 import mongoose, { Schema } from 'mongoose';
 
-// Test event schema
-// Author: Josh Birdwell
-//const eventSchema = new Schema({
- // title: String,
- // date: Date,
- // location: String,
- // lng: Number,
- // lat: Number
- //});
+//Sets the discriminator/version key
+var options = {discriminatorKey: 'typeOfPlace', versionKey: false};
 
 //Place schema. 
 //accessibility, imgs subject to change.
@@ -42,7 +37,7 @@ const placeSchema = new Schema({
   wifi: Boolean,
   accessibility: Boolean,
   visitDuration: Number
-});
+}, options);
 
 // Create the model for the discriminators.
 var Place = mongoose.model('Place', placeSchema);
@@ -51,28 +46,24 @@ var Place = mongoose.model('Place', placeSchema);
 //Discriminators are a schema inheritance mechanism.
 var ShoppingPlace = Place.discriminator('Shopping', new Schema({
   typeOfShopping: String
-}));
+}, options));
 
 var OutdoorsPlace = Place.discriminator('Outdoors', new Schema({
   typeOfOutdoorsPlace: String, difficulty: String, distance: Number
-}));
+}, options));
 
 //If isIndoor is false, then its outdoors
 var SightPlace = Place.discriminator('Sight', new Schema({
   typeOfSight: String, isIndoor: Boolean
-}));
+}, options));
 
 var EventPlace = Place.discriminator('Event', new Schema({
-  dates: { start_date: Date, end_date: Date }
-}));
+  dates: { start_date: String, end_date: String }
+}, options));
 
 var FoodPlace = Place.discriminator('Food', new Schema({
   cuisine: String, atmosphere: String
-}));
-
-// Test export event schema
-// Author: Josh Birdwell
-//export default model('event', eventSchema, 'events');
+}, options));
 
 //Export the mongoose model
 //Model: field, name

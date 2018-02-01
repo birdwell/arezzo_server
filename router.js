@@ -1,6 +1,6 @@
 // v.0.0.1
-// Author: Josh Birdwell, Emily Black
-// Date: 1/31/18
+// Author: Emily Black
+// Date: 2/1/18
 
 import { Router } from 'express';
 import PlaceController, { addPlace, updatePlace, getPlace, deletePlace } from './controllers/PlaceController';
@@ -17,20 +17,22 @@ const router = Router();
 
 //This route gets a specific place, updates a specific place, deletes a specific place
 router.route('/place/:placeId')
-  .get(getPlace) //WORKS
-  .put(updatePlace) //WORKS
-  .delete(deletePlace); //WORKS
+  .get(getPlace)
+  .put(updatePlace)
+  .delete(deletePlace);
 
 //This route gets all places, adds a place
 router.route('/place')
-  .get(PlaceController) //WORKS
-  .post(addPlace); //WORKS
+  .get(PlaceController)
+  .post(addPlace);
 
+//This route gets a specific shopping place, updates a specific shopping place, delets a specific shopping place
 router.route('/shopping/:placeId')
   .get(getShoppingPlace)
   .put(updateShoppingPlace) 
   .delete(deleteShoppingPlace);
 
+//This route gets all shopping places, adds a shopping place
 router.route('/shopping')
   .get(ShoppingController) 
   .post(addShoppingPlace);

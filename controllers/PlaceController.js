@@ -1,6 +1,6 @@
 // v.0.0.1
 // Author: Emily Black
-// Date: 1/31/18
+// Date: 2/1/18
 
 import {Place} from '../model/Place';
 
@@ -19,7 +19,8 @@ export const addPlace = (req, res) => {
 
   newPlace.save(err => {
     if (err) {
-      res.sendStatus(500).send(err.message); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     } else {
       res.send('Place successfully created.');
     }
@@ -33,7 +34,8 @@ export const getPlace = (req, res) => {
 
   Place.findById(placeId, function (err, doc) {
     if (err) {
-      res.status('500').send('Could not find place.'); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     }
     else {
       res.json(doc);
@@ -44,8 +46,7 @@ export const getPlace = (req, res) => {
 //Updates a places info
 export const updatePlace = (req, res) => {
   //Defines what the DB requests
-  // a = { 'foo': 'bar' }
-  const { body: fields , params: { placeId }} = req;
+  const { body: fields, params: { placeId }} = req;
   
   Place.findByIdAndUpdate(placeId, { ...fields }, {new: true}, (err, result) => {
     res.json(result);
@@ -59,7 +60,8 @@ export const deletePlace = (req, res) => {
 
   Place.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      res.status('500').send('Could not find place.'); //throws a server side error
+      rres.send(err.message);
+      res.sendStatus(500); //throws a server side error
     }
     else {
       res.json(result);

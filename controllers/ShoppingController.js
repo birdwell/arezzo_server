@@ -1,6 +1,6 @@
 // v.0.0.1
 // Author: Emily Black
-// Date: 1/31/18
+// Date: 2/1/18
 
 import {ShoppingPlace} from '../model/Place';
 
@@ -19,7 +19,8 @@ export const addShoppingPlace = (req, res) => {
 
   newShoppingPlace.save(err => {
     if (err) {
-      res.sendStatus(500).send(err.message); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     } else {
       res.send('Shopping place successfully created.');
     }
@@ -33,7 +34,8 @@ export const getShoppingPlace = (req, res) => {
 
   ShoppingPlace.findById(placeId, function (err, doc) {
     if (err) {
-      res.status('500').send('Could not find shopping place.'); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     }
     else {
       res.json(doc);
@@ -44,9 +46,9 @@ export const getShoppingPlace = (req, res) => {
 //Updates a shopping places info
 export const updateShoppingPlace = (req, res) => {
   //Defines what the DB requests
-  const { body: { fields}, params: { placeId }} = req;
+  const { body: fields, params: { placeId }} = req;
   
-  ShoppingPlace.findByIdAndUpdate(placeId, { ...fields }, (err, result) => {
+  ShoppingPlace.findByIdAndUpdate(placeId, { ...fields }, {new: true}, (err, result) => {
     res.json(result);
   })
 }
@@ -58,7 +60,8 @@ export const deleteShoppingPlace = (req, res) => {
 
   ShoppingPlace.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      res.status('500').send('Could not find shopping place.'); //throws a server side error
+      res.send(err.message);
+      res.sendStatus(500); //throws a server side error
     }
     else {
       res.json(result);
