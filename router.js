@@ -7,6 +7,8 @@ import PlaceController, { addPlace, updatePlace, getPlace, deletePlace } from '.
 import ShoppingController, { getShoppingPlace, updateShoppingPlace, deleteShoppingPlace, addShoppingPlace } from './controllers/ShoppingController';
 import EventController, { addEventPlace, updateEventPlace, getEventPlace, deleteEventPlace } from './controllers/EventController';
 import SightController, { addSightPlace, updateSightPlace, getSightPlace, deleteSightPlace } from './controllers/SightController';
+import OutdoorsController, { addOutdoorsPlace, updateOutdoorsPlace, getOutdoorsPlace, deleteOutdoorsPlace } from './controllers/OutdoorsController';
+import FoodController, { addFoodPlace, updateFoodPlace, getFoodPlace, deleteFoodPlace } from './controllers/FoodController';
 
 const router = Router();
 
@@ -26,13 +28,11 @@ router.route('/place')
   .get(PlaceController)
   .post(addPlace);
 
-//This route gets a specific shopping place, updates a specific shopping place, delets a specific shopping place
 router.route('/shopping/:placeId')
   .get(getShoppingPlace)
   .put(updateShoppingPlace) 
   .delete(deleteShoppingPlace);
 
-//This route gets all shopping places, adds a shopping place
 router.route('/shopping')
   .get(ShoppingController) 
   .post(addShoppingPlace);
@@ -54,5 +54,23 @@ router.route('/sights/:placeId')
 router.route('/sights')
   .get(SightController) 
   .post(addSightPlace);
+
+router.route('/outdoors/:placeId')
+  .get(getOutdoorsPlace)
+  .put(updateOutdoorsPlace) 
+  .delete(deleteOutdoorsPlace);
+
+router.route('/outdoors')
+  .get(OutdoorsController) 
+  .post(addOutdoorsPlace);
+
+router.route('/foods/:placeId')
+  .get(getFoodPlace)
+  .put(updateFoodPlace) 
+  .delete(deleteFoodPlace);
+
+router.route('/foods')
+  .get(FoodController) 
+  .post(addFoodPlace);
 
 export default router;

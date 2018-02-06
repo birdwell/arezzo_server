@@ -31,7 +31,7 @@ const placeSchema = new Schema({
     media_links: [ String ]
   },
   suggested_age: { type: String, required: true },
-  payment_options: [{ type: String, required: true }],
+  payment_options: [ String ],
   lang_avail: [{ type: String, required: true }],
   restrictions: [{ type: String, required: true }],
   wifi: Boolean,
@@ -49,7 +49,7 @@ var ShoppingPlace = Place.discriminator('Shopping', new Schema({
 }, options));
 
 var OutdoorsPlace = Place.discriminator('Outdoors', new Schema({
-  typeOfOutdoorsPlace: String, difficulty: String, distance: Number
+  typeOfOutdoorsPlace: String, difficulty: String, distance: Number //km
 }, options));
 
 //If isIndoor is false, then its outdoors
