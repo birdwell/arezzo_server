@@ -2,71 +2,66 @@
 // Author: Emily Black
 // Date: 2/1/18
 
-import {Place} from '../model/Place';
+import { Place } from '../model';
 
-//Gets all places
+// Gets all places
 const index = (req, res) => {
   Place.find({}, null, {}, (err, places) => (
     res.json(places)
   ));
 };
 
-//Adds a new place
+// Adds a new place
 export const addPlace = (req, res) => {
-  //Defines what the DB requests
+  // Defines what the DB requests
   const { body } = req;
   const newPlace = new Place({ ...body });
 
-  newPlace.save(err => {
+  newPlace.save((err) => {
     if (err) {
       res.send(err.message).sendStatus(500);
-      
     } else {
       res.send('Place successfully created.');
     }
   });
-}
+};
 
-//Gets a place given a placeID
+// Gets a place given a placeID
 export const getPlace = (req, res) => {
-  //Defines what the DB requests
+  // Defines what the DB requests
   const { params: { placeId } } = req;
 
-  Place.findById(placeId, function (err, doc) {
+  Place.findById(placeId, (err, doc) => {
     if (err) {
       res.send(err.message).sendStatus(500);
-      
-    }
-    else {
+    } else {
       res.json(doc);
     }
-  })
-}
+  });
+};
 
-//Updates a places info
+// Updates a places info
 export const updatePlace = (req, res) => {
-  //Defines what the DB requests
-  const { body: fields, params: { placeId }} = req;
-  
-  Place.findByIdAndUpdate(placeId, { ...fields }, {new: true}, (err, result) => {
-    res.json(result);
-  })
-}
+  // Defines what the DB requests
+  const { body: fields, params: { placeId } } = req;
 
-//Deletes a place given an ID
+  Place.findByIdAndUpdate(placeId, { ...fields }, { new: true }, (err, result) => {
+    res.json(result);
+  });
+};
+
+// Deletes a place given an ID
 export const deletePlace = (req, res) => {
-  //Defines what the DB requests
+  // Defines what the DB requests
   const { params: { placeId } } = req;
 
   Place.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      rres.send(err.message);
-      
-    }
-    else {
+      res.send(err.message);
+    } else {
       res.json(result);
     }
   });
-}
+};
 
 export default index;

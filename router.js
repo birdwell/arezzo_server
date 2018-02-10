@@ -13,65 +13,65 @@ import GooglePlaces from './controllers/GooglePlaces';
 
 const router = Router();
 
-//GET = gets data
-//POST = adds data
-//PUT = updates data
-//DELETE = deletes data
+// GET = gets data
+// POST = adds data
+// PUT = updates data
+// DELETE = deletes data
 
-//This route gets a specific place, updates a specific place, deletes a specific place
+// This route gets a specific place, updates a specific place, deletes a specific place
 router.route('/place/:placeId')
   .get(getPlace)
   .put(updatePlace)
   .delete(deletePlace);
 
-//This route gets all places, adds a place
+// This route gets all places, adds a place
 router.route('/place')
   .get(PlaceController)
   .post(addPlace);
 
 router.route('/shopping/:placeId')
   .get(getShoppingPlace)
-  .put(updateShoppingPlace) 
+  .put(updateShoppingPlace)
   .delete(deleteShoppingPlace);
 
 router.route('/shopping')
-  .get(ShoppingController) 
+  .get(ShoppingController)
   .post(addShoppingPlace);
 
 router.route('/events/:placeId')
   .get(getEventPlace)
-  .put(updateEventPlace) 
+  .put(updateEventPlace)
   .delete(deleteEventPlace);
 
 router.route('/events')
-  .get(EventController) 
+  .get(EventController)
   .post(addEventPlace);
 
 router.route('/sights/:placeId')
   .get(getSightPlace)
-  .put(updateSightPlace) 
+  .put(updateSightPlace)
   .delete(deleteSightPlace);
 
 router.route('/sights')
-  .get(SightController) 
+  .get(SightController)
   .post(addSightPlace);
 
 router.route('/outdoors/:placeId')
   .get(getOutdoorsPlace)
-  .put(updateOutdoorsPlace) 
+  .put(updateOutdoorsPlace)
   .delete(deleteOutdoorsPlace);
 
 router.route('/outdoors')
-  .get(OutdoorsController) 
+  .get(OutdoorsController)
   .post(addOutdoorsPlace);
 
 router.route('/foods/:placeId')
   .get(getFoodPlace)
-  .put(updateFoodPlace) 
+  .put(updateFoodPlace)
   .delete(deleteFoodPlace);
 
 router.route('/foods')
-  .get(FoodController) 
+  .get(FoodController)
   .post(addFoodPlace);
 
 router.route('/placeDetails/:placeId')
