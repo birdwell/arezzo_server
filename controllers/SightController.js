@@ -19,8 +19,8 @@ export const addSightPlace = (req, res) => {
 
   newSightPlace.save(err => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     } else {
       res.send('Sight successfully created.');
     }
@@ -34,8 +34,8 @@ export const getSightPlace = (req, res) => {
 
   SightPlace.findById(placeId, function (err, doc) {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     }
     else {
       res.json(doc);
@@ -60,8 +60,8 @@ export const deleteSightPlace = (req, res) => {
 
   SightPlace.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     }
     else {
       res.json(result);

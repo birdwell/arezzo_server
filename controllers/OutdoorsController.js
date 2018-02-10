@@ -19,7 +19,7 @@ export const addOutdoorsPlace = (req, res)  => {
 
     newOutdoorsPlace.save(err => {
         if(err) {
-            res.send(err.message);
+            res.send(err.message).sendStatus(500);
             res.sendStatus(500); // throws a server side error
         } else {
             res.send('Outdoor successfully created.');
@@ -34,7 +34,7 @@ export const getOutdoorsPlace = (req, res) => {
 
     OutdoorsPlace.findById(placeId, function(err, doc) {
         if(err) {
-            res.send(err.message);
+            res.send(err.message).sendStatus(500);
             res.sendStatus(500); // throws a server side error
         }
         else {
@@ -60,8 +60,8 @@ export const deleteOutdoorsPlace = (req, res) => {
 
     OutdoorsPlace.findByIdAndRemove(placeId,(err, result) => {
     if (err) {
-        res.send(err.message);
-        res.sendStatus(500); //throws a server side error
+        res.send(err.message).sendStatus(500);
+        
     }
     else {
         res.json(result);

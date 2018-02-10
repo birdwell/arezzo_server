@@ -19,8 +19,8 @@ export const addPlace = (req, res) => {
 
   newPlace.save(err => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     } else {
       res.send('Place successfully created.');
     }
@@ -34,8 +34,8 @@ export const getPlace = (req, res) => {
 
   Place.findById(placeId, function (err, doc) {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     }
     else {
       res.json(doc);
@@ -61,7 +61,7 @@ export const deletePlace = (req, res) => {
   Place.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
       rres.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      
     }
     else {
       res.json(result);

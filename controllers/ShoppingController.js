@@ -19,8 +19,8 @@ export const addShoppingPlace = (req, res) => {
 
   newShoppingPlace.save(err => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     } else {
       res.send('Shopping place successfully created.');
     }
@@ -34,8 +34,8 @@ export const getShoppingPlace = (req, res) => {
 
   ShoppingPlace.findById(placeId, function (err, doc) {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     }
     else {
       res.json(doc);
@@ -60,8 +60,8 @@ export const deleteShoppingPlace = (req, res) => {
 
   ShoppingPlace.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     }
     else {
       res.json(result);

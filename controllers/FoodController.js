@@ -19,7 +19,7 @@ export const addFoodPlace = (req, res)  => {
 
     newFoodPlace.save(err => {
         if(err) {
-            res.send(err.message);
+            res.send(err.message).sendStatus(500);
             res.sendStatus(500); // throws a server side error
         } else {
             res.send('Food place successfully created.');
@@ -34,7 +34,7 @@ export const getFoodPlace = (req, res) => {
 
     FoodPlace.findById(placeId, function(err, doc) {
         if(err) {
-            res.send(err.message);
+            res.send(err.message).sendStatus(500);
             res.sendStatus(500); // throws a server side error
         }
         else {
@@ -60,8 +60,8 @@ export const deleteFoodPlace = (req, res) => {
 
     FoodPlace.findByIdAndRemove(placeId,(err, result) => {
     if (err) {
-        res.send(err.message);
-        res.sendStatus(500); //throws a server side error
+        res.send(err.message).sendStatus(500);
+        
     }
     else {
         res.json(result);

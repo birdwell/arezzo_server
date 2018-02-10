@@ -6,7 +6,11 @@ import router from './router';
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://admin:kHooCJJTJfIr4GM4@arezzo-shard-00-00-ewv9s.mongodb.net:27017,arezzo-shard-00-01-ewv9s.mongodb.net:27017,arezzo-shard-00-02-ewv9s.mongodb.net:27017/test?ssl=true&replicaSet=Arezzo-shard-0&authSource=admin', {
+const mongodb_path = process.env.NODE_ENV === 'production' 
+  ? 'mongodb://admin:kHooCJJTJfIr4GM4@arezzo-shard-00-00-ewv9s.mongodb.net:27017,arezzo-shard-00-01-ewv9s.mongodb.net:27017,arezzo-shard-00-02-ewv9s.mongodb.net:27017/test?ssl=true&replicaSet=Arezzo-shard-0&authSource=admin'
+  : 'mongodb://localhost/arezzo';
+
+mongoose.connect(mongodb_path, {
   useMongoClient: true,
 });
 

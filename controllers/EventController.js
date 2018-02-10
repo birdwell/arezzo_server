@@ -19,8 +19,7 @@ export const addEventPlace = (req, res) => {
 
   newEventPlace.save(err => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500); //throws a server side error
     } else {
       res.send('Event successfully created.');
     }
@@ -34,8 +33,7 @@ export const getEventPlace = (req, res) => {
 
   EventPlace.findById(placeId, function (err, doc) {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
     }
     else {
       res.json(doc);
@@ -60,8 +58,8 @@ export const deleteEventPlace = (req, res) => {
 
   EventPlace.findByIdAndRemove(placeId, (err, result) => {
     if (err) {
-      res.send(err.message);
-      res.sendStatus(500); //throws a server side error
+      res.send(err.message).sendStatus(500);
+      
     }
     else {
       res.json(result);
