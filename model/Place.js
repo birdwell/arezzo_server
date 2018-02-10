@@ -14,26 +14,26 @@ var options = {discriminatorKey: 'typeOfPlace', versionKey: false};
 //_id is the default key for Place
 const placeSchema = new Schema({
   title: { type: String, required: true },
-  description: { type: String, required: true },
+  description: { type: String },
   location: { type: String, required: true },
-  lat: { type: Number, required: true },
-  long: { type: Number, required: true },
+  latitude: { type: Number, required: true },
+  longitude: { type: Number, required: true },
   hours: {
-    openHour: { type: Number, required: true },
-    closeHour: { type: Number, required: true },
+    openHour: { type: Number, },
+    closeHour: { type: Number, },
   },
-  price: { type: Number, required: true },
+  price: { type: Number, },
   imgs: [ ],
-  contact_info: {
-    phone_num: String,
+  contactInfo: {
+    phoneNumber: String,
     address: { type: String, required: true },
     website: String,
-    media_links: [ String ]
+    mediaLinks: [ String ]
   },
-  suggested_age: { type: String, required: true },
-  payment_options: [ String ],
-  lang_avail: [{ type: String, required: true }],
-  restrictions: [{ type: String, required: true }],
+  suggestedAge: { type: String },
+  paymentOptions: [ String ],
+  languagesAvailable: [{ type: String, required: true }],
+  restrictions: [{ type: String }],
   wifi: Boolean,
   accessibility: Boolean,
   visitDuration: Number
@@ -58,7 +58,7 @@ var SightPlace = Place.discriminator('Sight', new Schema({
 }, options));
 
 var EventPlace = Place.discriminator('Event', new Schema({
-  dates: { start_date: String, end_date: String }
+  dates: { startDate: String, endDate: String }
 }, options));
 
 var FoodPlace = Place.discriminator('Food', new Schema({

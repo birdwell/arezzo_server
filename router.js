@@ -9,6 +9,7 @@ import EventController, { addEventPlace, updateEventPlace, getEventPlace, delete
 import SightController, { addSightPlace, updateSightPlace, getSightPlace, deleteSightPlace } from './controllers/SightController';
 import OutdoorsController, { addOutdoorsPlace, updateOutdoorsPlace, getOutdoorsPlace, deleteOutdoorsPlace } from './controllers/OutdoorsController';
 import FoodController, { addFoodPlace, updateFoodPlace, getFoodPlace, deleteFoodPlace } from './controllers/FoodController';
+import GooglePlaces from './controllers/GooglePlaces';
 
 const router = Router();
 
@@ -72,5 +73,8 @@ router.route('/foods/:placeId')
 router.route('/foods')
   .get(FoodController) 
   .post(addFoodPlace);
+
+router.route('/placeDetails/:placeId')
+  .get(GooglePlaces);
 
 export default router;
