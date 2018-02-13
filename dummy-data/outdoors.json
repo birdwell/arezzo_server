@@ -1,0 +1,209 @@
+{
+      "outdoors": [
+            {
+                  "title": "Grand Canyon National Park",
+                  "description": "Steep-sided canyon carved by the Colorado River",
+                  "location": "Arizona, U.S",
+                  "latitude": 582.59,
+                  "longitude": 967.23,
+                  "hours": {
+                        "openHour": 12,
+                        "closeHour": 12
+                  },
+                  "price": 50,
+                  "imgs": [
+                        null
+                  ],
+                  "contactInfo": {
+                        "phoneNumber": 8776138886,
+                        "address": "20 South Entrance Road Grand Canyon, AZ .",
+                        "website": "www.grandcanyon.com",
+                        "mediaLinks": [
+                              "twitter.com/grandcanyon",
+                              "facebook.com/grandcanyon"
+                        ]
+                  },
+                  "suggestedAge": "5+",
+                  "paymentOptions": [
+                        "Cash"
+                  ],
+                  "languagesAvailable": [
+                        "english",
+                        "spanish"
+                  ],
+                  "restrictions": [
+                        "blind"
+                  ],
+                  "wifi": false,
+                  "accessibility": false,
+                  "visitDuration": 60,
+                  "typeOfOutdoorsPlace": "park",
+                  "difficulty": "easy",
+                  "distance": 15
+            },
+            {
+                  "title": "Jackson Hole Mountain Resort",
+                  "description": "50 mile longitude valley or flat hole in the mountains",
+                  "location": "Jackson, Wyoming",
+                  "latitude": 582.59,
+                  "longitude": 967.23,
+                  "hours": {
+                        "openHour": 9,
+                        "closeHour": 4
+                  },
+                  "price": 76,
+                  "imgs": [
+                        null
+                  ],
+                  "contactInfo": {
+                        "phoneNumber": 3077392640,
+                        "address": "7652 Granite Ridge Loop Rd. Teton Village, WY .",
+                        "website": "www.jacksonhole.com",
+                        "mediaLinks": [
+                              "twitter.com/jacksonhole",
+                              "facebook.com/jacksonhole"
+                        ]
+                  },
+                  "suggestedAge": "10+",
+                  "paymentOptions": [
+                        "Cash"
+                  ],
+                  "languagesAvailable": [
+                        "english",
+                        "spanish"
+                  ],
+                  "restrictions": [
+                        "blind"
+                  ],
+                  "wifi": false,
+                  "accessibility": false,
+                  "visitDuration": 120,
+                  "typeOfOutdoorsPlace": "Resort",
+                  "difficulty": "easy",
+                  "distance": 15
+            },
+            {
+                  "title": "Acadia National Park",
+                  "description": "Highest rocky headlands along the Atlantic coastline",
+                  "location": "Maine, US",
+                  "latitude": 582.59,
+                  "longitude": 967.23,
+                  "hours": {
+                        "openHour": 12,
+                        "closeHour": 12
+                  },
+                  "price": 60,
+                  "imgs": [
+                        null
+                  ],
+                  "contactInfo": {
+                        "phoneNumber": 2072883338,
+                        "address": "20 McFarland Hill Drive, ME .",
+                        "website": "www.acadiapark.com",
+                        "mediaLinks": [
+                              "twitter.com/acadiapark",
+                              "facebook.com/acadiapark"
+                        ]
+                  },
+                  "suggestedAge": "5+",
+                  "paymentOptions": [
+                        "Cash"
+                  ],
+                  "languagesAvailable": [
+                        "english",
+                        "spanish"
+                  ],
+                  "restrictions": [
+                        "blind"
+                  ],
+                  "wifi": false,
+                  "accessibility": false,
+                  "visitDuration": 60,
+                  "typeOfOutdoorsPlace": "Park",
+                  "difficulty": "easy",
+                  "distance": 15
+            },
+            {
+                  "title": "Yosemite National Park",
+                  "description": "Best known for its waterfalls",
+                  "location": "California, US",
+                  "latitude": 582.59,
+                  "longitude": 967.23,
+                  "hours": {
+                        "openHour": 12,
+                        "closeHour": 12
+                  },
+                  "price": 80,
+                  "imgs": [
+                        null
+                  ],
+                  "contactInfo": {
+                        "phoneNumber": 2093720200,
+                        "address": "9035 Village Dr Yosemite Valley, CA.",
+                        "website": "www.yosemitepark.com",
+                        "mediaLinks": [
+                              "twitter.com/yosemitepark",
+                              "facebook.com/yosemitepark"
+                        ]
+                  },
+                  "suggestedAge": "5+",
+                  "paymentOptions": [
+                        "Cash"
+                  ],
+                  "languagesAvailable": [
+                        "english",
+                        "spanish"
+                  ],
+                  "restrictions": [
+                        "blind"
+                  ],
+                  "wifi": false,
+                  "accessibility": false,
+                  "visitDuration": 60,
+                  "typeOfOutdoorsPlace": "Park",
+                  "difficulty": "easy",
+                  "distance": 15
+            },
+            {
+                  "title": "Palm Desert",
+                  "description": "popular retreat for snowbirds from colder climates ",
+                  "location": "California, US",
+                  "latitude": 582.59,
+                  "longitude": 967.23,
+                  "hours": {
+                        "openHour": 10,
+                        "closeHour": 9
+                  },
+                  "price": 75,
+                  "imgs": [
+                        null
+                  ],
+                  "contactInfo": {
+                        "phoneNumber": 7603460611,
+                        "address": "73510 Fred Waring Drive Palm Desert, CA.",
+                        "website": "www.desertpalm.com",
+                        "mediaLinks": [
+                              "twitter.com/desertpalm",
+                              "facebook.com/desertpalm"
+                        ]
+                  },
+                  "suggestedAge": "10+",
+                  "paymentOptions": [
+                        "Cash"
+                  ],
+                  "languagesAvailable": [
+                        "english",
+                        "spanish"
+                  ],
+                  "restrictions": [
+                        "blind"
+                  ],
+                  "wifi": false,
+                  "accessibility": false,
+                  "visitDuration": 60,
+                  "typeOfOutdoorsPlace": "Desert",
+                  "difficulty": "easy",
+                  "distance": 15
+            }
+      ]
+}

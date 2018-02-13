@@ -1,0 +1,214 @@
+{ 
+    "events": [{
+        "title": "Mike Hosty",
+        "description": "Guitarist Mike Hosty performance.",
+        "location": "Nior Bistro & Bar",
+        "latitude": 49.49,
+        "longitude": 59.23,
+        "hours": {
+            "openHour": 8,
+            "closeHour": 12
+        },
+        "price": 18,
+        "imgs": [
+            null
+        ],
+        "contactInfo": {
+            "phoneNumber": 4052084233,
+            "address": "701 W Sheridan Ave Oklahoma City, OK",
+            "website": "www.MikeHosty.com",
+            "mediaLinks": [
+                "twitter.com/MikeHosty",
+                "facebook.com/MikeHosty"
+            ]
+        },
+        "suggestedAge": "18+",
+        "paymentOptions": [
+            "Cash"
+        ],
+        "languagesAvailable": [
+            "english",
+            "spanish"
+        ],
+        "restrictions": [
+            "none"
+        ],
+        "wifi": false,
+        "accessibility": true,
+        "visitDuration": 180,
+        "dates": {
+            "start_date": "02/10/18",
+            "end_date": "02/11/18"
+        }
+    },
+    {
+        "title": "An Affair of the Heart 2018",
+        "description": "Largest craft show featuring more than 800 exhibitors",
+        "location": "State Fair Park",
+        "latitude": 49.49,
+        "longitude": 59.23,
+        "hours": {
+            "openHour": 9,
+            "closeHour": 6
+        },
+        "price": 9,
+        "imgs": [
+            null
+        ],
+        "contactInfo": {
+            "phoneNumber": 4056322652,
+            "address": "3001 General Pershing Blvd, Oklahoma City, OK",
+            "website": "www.okstatefair.com",
+            "mediaLinks": [
+                "twitter.com/okstatefair",
+                "facebook.com/okstatefair"
+            ]
+        },
+        "suggestedAge": "7+",
+        "paymentOptions": [
+            "Cash"
+        ],
+        "languagesAvailable": [
+            "english",
+            "spanish"
+        ],
+        "restrictions": [
+            "none"
+        ],
+        "wifi": false,
+        "accessibility":false,
+        "visitDuration": 120,
+        "dates": {
+            "start_date": "02/9/18",
+            "end_date": "02/11/18"
+        }
+    },
+    {
+        "title": "2018 Austin Saturday Spiritual Life Fair",
+        "description": "presenting special talents and products in a community",
+        "location": "Nature’s Treasure",
+        "latitude": 49.49,
+        "longitude": 59.23,
+        "hours": {
+            "openHour": 10,
+            "closeHour": 6
+        },
+        "price": 15,
+        "imgs": [
+            null
+        ],
+        "contactInfo": {
+            "phoneNumber": 4056322652,
+            "address": "4103 North IH-35 Austin, TX 78722",
+            "website": "www.fairandfestivals.com",
+            "mediaLinks": [
+                "twitter.com/fairandfestivals",
+                "facebook.com/fairandfestivals"
+            ]
+        },
+        "suggestedAge": "7+",
+        "paymentOptions": [
+            "Cash"
+        ],
+        "languagesAvailable": [
+            "english",
+            "spanish"
+        ],
+        "restrictions": [
+            "none"
+        ],
+        "wifi": false,
+        "accessibility":false,
+        "visitDuration": 120,
+        "dates": {
+            "start_date": "02/10/18",
+            "end_date": "02/10/18"
+        }
+    },
+    {
+        "title": "42nd Annual Arkansas RV show",
+        "description": "Browse dozens of recreational vehicles in a range of shapes, sizes, and styles",
+        "location": "Statehouse Convention Center",
+        "latitude": 49.49,
+        "longitude": 59.23,
+        "hours": {
+            "openHour": 12,
+            "closeHour": 12
+        },
+        "price": 6,
+        "imgs": [
+            null
+        ],
+        "contactInfo": {
+            "phoneNumber": 5013764781,
+            "address": "101 East Markham Street, Little Rock, AR",
+            "website": "www.dgattractions.com",
+            "mediaLinks": [
+                "twitter.com/dgattractions",
+                "facebook.com/dgattractions"
+            ]
+        },
+        "suggestedAge": "4+",
+        "paymentOptions": [
+            "Cash"
+        ],
+        "languagesAvailable": [
+            "english",
+            "spanish"
+        ],
+        "restrictions": [
+            "none"
+        ],
+        "wifi": false,
+        "accessibility":false,
+        "visitDuration": 30,
+        "dates": {
+            "start_date": "02/9/18",
+            "end_date": "02/12/18"
+    }
+    },
+    {
+        "title": "Midwestern Herb and Garden Show",
+        "description": "Vendors with garden relatitudeed crafts and wares. ",
+        "location": "Times Square Mall in Mount Vernon",
+        "latitude": 49.49,
+        "longitude": 59.23,
+        "hours": {
+            "openHour": 10,
+            "closeHour": 9
+        },
+        "price": 6,
+        "imgs": [
+            null
+        ],
+        "contactInfo": {
+            "phoneNumber": 618847108,
+            "address": "7274 Broadway St Mount Vernon IL, ",
+            "website": "www.dgattractions.com",
+            "mediaLinks": [
+                "twitter.com/midwesternherbandgardenshow",
+                "facebook.com/midwesternherbandgardenshow"
+            ]
+        },
+        "suggestedAge": "6+",
+        "paymentOptions": [
+            "Cash"
+        ],
+        "languagesAvailable": [
+            "english",
+            "spanish"
+        ],
+        "restrictions": [
+            "none"
+        ],
+        "wifi": false,
+        "accessibility":false,
+        "visitDuration": 120,
+        "dates": {
+            "start_date": "02/9/18",
+            "end_date": "02/11/18"
+        }
+    }]
+}
+
+

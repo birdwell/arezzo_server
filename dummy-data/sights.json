@@ -1,0 +1,197 @@
+{
+    "sights": [
+        {
+            "title": "Windsor Castle",
+            "description": "The Windsor’s Family Castle, est. 1700",
+            "location": "New Hampshire, England",
+            "latitude": 72.58,
+            "longitude": 85.98,
+            "hours": {
+                "openHour": 5,
+                "closeHour": 5
+            },
+            "price": 200,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "2nd Bricklane St.",
+                "website": "www.castle.com",
+                "mediaLinks": [
+                    null
+                ]
+            },
+            "suggestedAge": "12+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "british",
+                "english"
+            ],
+            "restrictions": [
+                "vision impaired"
+            ],
+            "wifi": false,
+            "accessibility": false,
+            "visitDuration": 120,
+            "typeOfSight": "historical",
+            "isIndoor": true
+        }, {
+            "title": "The Great Wall of China",
+            "description": "The Windsor’s Family Castle, est. 1700",
+            "location": "Beijing, China",
+            "latitude": 72.58,
+            "longitude": 85.98,
+            "hours": {
+                "openHour": 5,
+                "closeHour": 5
+            },
+            "price": 200,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "2nd Bricklane St.",
+                "website": "www.castle.com",
+                "mediaLinks": [
+                    null
+                ]
+            },
+            "suggestedAge": "12+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "british",
+                "english"
+            ],
+            "restrictions": [
+                "vision impaired"
+            ],
+            "wifi": false,
+            "accessibility": false,
+            "visitDuration": 120,
+            "typeOfSight": "historical",
+            "isIndoor": false
+        }, {
+            "title": "Niagara Falls",
+            "description": "The Horseshoe Falls, est. 1700",
+            "location": "Border of Ontario, Canada, New York, United State",
+            "latitude": 72.58,
+            "longitude": 85.98,
+            "hours": {
+                "openHour": 12,
+                "closeHour": 12
+            },
+            "price": 100,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "24 Buffalo Avenue.",
+                "website": "www.NiagaraFalls.com",
+                "mediaLinks": [
+                    null
+                ]
+            },
+            "suggestedAge": "4+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "british",
+                "English",
+                "French"
+            ],
+            "restrictions": [
+                "vision impaired"
+            ],
+            "wifi": false,
+            "accessibility": false,
+            "visitDuration": 180,
+            "typeOfSight": "nature",
+            "isIndoor": false
+        }, {
+            "title": "Blue Lagoon",
+            "description": "Icelandic landscape, est. 1700",
+            "location": "Reykjavik, Iceland",
+            "latitude": 72.58,
+            "longitude": 85.98,
+            "hours": {
+                "openHour": 8,
+                "closeHour": 10
+            },
+            "price": 100,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "240 Grindavik, Iceland",
+                "website": "www.BlueLagoon.com",
+                "mediaLinks": [
+                    null
+                ]
+            },
+            "suggestedAge": "2+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "british",
+                "English"
+            ],
+            "restrictions": [
+                "Contact lenses"
+            ],
+            "wifi": false,
+            "accessibility": false,
+            "visitDuration": 30,
+            "typeOfSight": "nature",
+            "isIndoor": false
+        }, {
+            "title": "Banff National Park",
+            "description": "oldest and most majestic national park in Canada",
+            "location": "Alberta, Canada",
+            "latitude": 72.58,
+            "longitude": 85.98,
+            "hours": {
+                "openHour": 9,
+                "closeHour": 5
+            },
+            "price": 136,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "Improvement District No, 9, AB TOL, Canada",
+                "website": "www.BanffNational.com",
+                "mediaLinks": [
+                    null
+                ]
+            },
+            "suggestedAge": "2+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "british",
+                "English",
+                "French"
+            ],
+            "restrictions": [
+                "vision impaired"
+            ],
+            "wifi": false,
+            "accessibility": false,
+            "visitDuration": 240,
+            "typeOfSight": "nature",
+            "isIndoor": false
+        }
+    ]
+}

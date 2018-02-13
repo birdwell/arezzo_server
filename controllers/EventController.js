@@ -2,7 +2,7 @@
 // Author: Emily Black
 // Date: 2/1/18
 
-import { Event } from '../model/Place';
+import { Event } from '../model/Event';
 
 // Gets all event places
 const index = (req, res) => {

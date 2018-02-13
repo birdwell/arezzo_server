@@ -1,0 +1,202 @@
+{
+    "shopping": [
+        {
+            "title": "Postscript",
+            "description": "Paper goods",
+            "location": "Gray, North Dakota",
+            "latitude": 82.24,
+            "longitude": 385.89,
+            "hours": {
+                "openHour": 8,
+                "closeHour": 5
+            },
+            "price": 45,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "1 Paper Dr.",
+                "website": "www.postscripts.com",
+                "mediaLinks": [
+                    "twitter.com/postscripts",
+                    "facebook.com/postscripts"
+                ]
+            },
+            "suggestedAge": "18+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "english"
+            ],
+            "restrictions": [
+                "vision impaired"
+            ],
+            "wifi": false,
+            "accessibility": false,
+            "visitDuration": 15,
+            "typeOfShopping": "Supplies"
+        },
+        {
+            "title": "Walmart",
+            "description": "Grocery Store",
+            "location": "Rome, Italy",
+            "latitude": 958.27,
+            "longitude": 847.28,
+            "hours": {
+                "openHour": 3,
+                "closeHour": 11
+            },
+            "price": 10,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "294727482",
+                "address": "West Gray St.",
+                "website": null,
+                "mediaLinks": [
+                    "twitter.com/walmart"
+                ]
+            },
+            "suggestedAge": "5+",
+            "paymentOptions": [
+                "cash",
+                "credit"
+            ],
+            "languagesAvailable": [
+                "italian"
+            ],
+            "restrictions": [
+                "vision impaired",
+                "hearing impaired"
+            ],
+            "wifi": true,
+            "accessibility": true,
+            "visitDuration": 60,
+            "typeOfShopping": "Groceries"
+        },
+        {
+            "title": "Arezzo’s Finest Shoes",
+            "description": "Shoes and shoe accessories.",
+            "location": "Arezzo, Italy",
+            "latitude": 523.23,
+            "longitude": 692.53,
+            "hours": {
+                "openHour": 8,
+                "closeHour": 5
+            },
+            "price": 175,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "18573847727",
+                "address": "842 Oakcrest Way",
+                "website": null,
+                "mediaLinks": [
+                    "twitter.com/arezzoshoes"
+                ]
+            },
+            "suggestedAge": "3+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "Italian",
+                "english",
+                "spanish"
+            ],
+            "restrictions": [
+                "none"
+            ],
+            "wifi": true,
+            "accessibility": false,
+            "visitDuration": 45,
+            "typeOfShopping": "Clothing"
+        },
+        {
+            "title": "Wine Co.",
+            "description": "Fresh bottled wine produced in Arezzo, Italy",
+            "location": "Arezzo, Italy",
+            "latitude": 824.24,
+            "longitude": 38.69,
+            "hours": {
+                "openHour": 10,
+                "closeHour": 3
+            },
+            "price": 250,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "18572858828",
+                "address": "82 Bluebird St.",
+                "website": "www.wine.co",
+                "mediaLinks": [
+                    "twitter.com/wineco",
+                    "facebook.com/wineco",
+                    "instagram.com/wineco"
+                ]
+            },
+            "suggestedAge": "25+",
+            "paymentOptions": [
+                "cash"
+            ],
+            "languagesAvailable": [
+                "italian"
+            ],
+            "restrictions": [
+                "none"
+            ],
+            "wifi": false,
+            "accessibility": true,
+            "visitDuration": 20,
+            "typeOfShopping": "Food"
+        },
+        {
+            "title": "Old Navy",
+            "description": "The best clothes for the best price!",
+            "location": "Arezzo, Italy",
+            "latitude": 23.24,
+            "longitude": 62.75,
+            "hours": {
+                "openHour": 8,
+                "closeHour": 5
+            },
+            "price": 20,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "18577737757",
+                "address": "12 Jeans Dr.",
+                "website": "www.oldnavy.com",
+                "mediaLinks": [
+                    "twitter.com/oldnavy",
+                    "facebook.com/oldnavy",
+                    "instagram.com/oldnavy"
+                ]
+            },
+            "suggestedAge": "12+",
+            "paymentOptions": [
+                "cash",
+                "credit",
+                "debit"
+            ],
+            "languagesAvailable": [
+                "english",
+                "italian",
+                "french"
+            ],
+            "restrictions": [
+                "vision impaired"
+            ],
+            "wifi": true,
+            "accessibility": true,
+            "visitDuration": 50,
+            "typeOfShopping": "Clothing"
+        }
+    ]
+}

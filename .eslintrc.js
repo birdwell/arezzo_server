@@ -3,6 +3,7 @@ module.exports = {
     "env": {
         "node": true,
         "es6": true,
+        "mocha": true
     },
     "rules": {
         "quotes": [2, "single"],
@@ -16,5 +17,6 @@ module.exports = {
         "jsx-a11y/label-has-for": 0,
         "jsx-a11y/anchor-is-valid": 0,
         "no-underscore-dangle": 0,
+        "consistent-return": 0
     }
 };

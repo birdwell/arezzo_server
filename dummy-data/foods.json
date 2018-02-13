@@ -1,0 +1,212 @@
+{
+    "foods": [
+        {
+            "title": "Braums",
+            "description": "Ice Cream and Dairy Store",
+            "location": "Norman, Oklahoma",
+            "latitude": 45.28,
+            "longitude": 72.48,
+            "hours": {
+                "openHour": 9,
+                "closeHour": 11
+            },
+            "price": 25,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "4055829183",
+                "address": "482 West St.",
+                "website": "www.braums.com",
+                "mediaLinks": [
+                    "twitter.com/braums",
+                    "facebook.com/braums"
+                ]
+            },
+            "suggestedAge": "5+",
+            "paymentOptions": [
+                "paypal",
+                "credit",
+                "debit"
+            ],
+            "languagesAvailable": [
+                "english",
+                "spanish",
+                "latin",
+                "italian"
+            ],
+            "restrictions": [
+                "dairy"
+            ],
+            "wifi": true,
+            "accessibility": true,
+            "visitDuration": 20,
+            "cuisine": "American",
+            "atmosphere": "casual"
+        },
+        {
+            "title": "Fuzzys",
+            "description": "Authentic Mexican Restaurant",
+            "location": "Austin, Texas",
+            "latitude": 528.24,
+            "longitude": 58.29,
+            "hours": {
+                "openHour": 7,
+                "closeHour": 7
+            },
+            "price": 10,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "5839285728",
+                "address": "41 East Birdwatch Ln.",
+                "website": "www.fuzzys.com",
+                "mediaLinks": [
+                    "twitter.com/fuzzys",
+                    "facebook.com/fuzzys"
+                ]
+            },
+            "suggestedAge": "3+",
+            "paymentOptions": [
+                "credit",
+                "debit",
+                "cash"
+            ],
+            "languagesAvailable": [
+                "english",
+                "spanish"
+            ],
+            "restrictions": [
+                "dairy"
+            ],
+            "wifi": true,
+            "accessibility": true,
+            "visitDuration": 35,
+            "cuisine": "Mexican",
+            "atmosphere": "casual"
+        },
+        {
+            "title": "Freddys",
+            "description": "American Styled Fast-food",
+            "location": "New York City, New York",
+            "latitude": 85.95,
+            "longitude": 28.58,
+            "hours": {
+                "openHour": 6,
+                "closeHour": 11
+            },
+            "price": 25,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "5829582231",
+                "address": "1 Steak St.",
+                "website": "www.freddys.com",
+                "mediaLinks": [
+                    "twitter.com/freddys",
+                    "facebook.com/freddys",
+                    "instagram.com/freddys"
+                ]
+            },
+            "suggestedAge": "5+",
+            "paymentOptions": [
+                "credit",
+                "debit",
+                "cash"
+            ],
+            "languagesAvailable": [
+                "english"
+            ],
+            "restrictions": [
+                "dairy"
+            ],
+            "wifi": true,
+            "accessibility": false,
+            "visitDuration": 25,
+            "cuisine": "American",
+            "atmosphere": "casual"
+        },
+        {
+            "title": "Chick Fil-a",
+            "description": "The Best American Chicken",
+            "location": "Jacksonville, Florida",
+            "latitude": 952.42,
+            "longitude": 626.52,
+            "hours": {
+                "openHour": 8,
+                "closeHour": 5
+            },
+            "price": 30,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": null,
+                "address": "852 Darkwood Ln..",
+                "website": null,
+                "mediaLinks": [
+                    null
+                ]
+            },
+            "suggestedAge": "3+",
+            "paymentOptions": [
+                "credit",
+                "debit",
+                "cash"
+            ],
+            "languagesAvailable": [
+                "english",
+                "spanish"
+            ],
+            "restrictions": [
+                "none"
+            ],
+            "wifi": true,
+            "accessibility": true,
+            "visitDuration": 30,
+            "cuisine": "American",
+            "atmosphere": "casual"
+        },
+        {
+            "title": "Italy’s finest - Pasta and Wine House",
+            "description": "Authentic Pasta and Wine!",
+            "location": "Arezzo, Italy",
+            "latitude": 582.34,
+            "longitude": 92.43,
+            "hours": {
+                "openHour": 3,
+                "closeHour": 9
+            },
+            "price": 75,
+            "imgs": [
+                null
+            ],
+            "contactInfo": {
+                "phoneNumber": "94295828481",
+                "address": "742 Vineyard Blvd.",
+                "website": "www.italysfinest.com",
+                "mediaLinks": [
+                    "facebook.com/italysfinest"
+                ]
+            },
+            "suggestedAge": "21+",
+            "paymentOptions": [
+                "cash",
+                "credit"
+            ],
+            "languagesAvailable": [
+                "italian"
+            ],
+            "restrictions": [
+                "none"
+            ],
+            "wifi": false,
+            "accessibility": true,
+            "visitDuration": 120,
+            "cuisine": "Italian",
+            "atmosphere": "semi-formal"
+        }
+    ]
+}
