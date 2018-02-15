@@ -1,3 +1,5 @@
+/* Author: Josh Birdwell */
+/* Tests to check if we created 5 of each model */
 import { Event, Food, Outdoors, Shopping, Sight } from '../model';
 
 const assert = require('assert');
