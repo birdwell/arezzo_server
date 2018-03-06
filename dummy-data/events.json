@@ -3,8 +3,8 @@
         "title": "Mike Hosty",
         "description": "Guitarist Mike Hosty performance.",
         "location": "Nior Bistro & Bar",
-        "latitude": 49.49,
-        "longitude": 59.23,
+        "latitude": 30.208611,
+        "longitude": -97.445833,
         "hours": {
             "openHour": 8,
             "closeHour": 12
@@ -45,8 +45,8 @@
         "title": "An Affair of the Heart 2018",
         "description": "Largest craft show featuring more than 800 exhibitors",
         "location": "State Fair Park",
-        "latitude": 49.49,
-        "longitude": 59.23,
+        "latitude": 38.208611,
+        "longitude": -93.445833,
         "hours": {
             "openHour": 9,
             "closeHour": 6
@@ -87,8 +87,8 @@
         "title": "2018 Austin Saturday Spiritual Life Fair",
         "description": "presenting special talents and products in a community",
         "location": "Nature’s Treasure",
-        "latitude": 49.49,
-        "longitude": 59.23,
+        "latitude": 39.208611,
+        "longitude": -80.445833,
         "hours": {
             "openHour": 10,
             "closeHour": 6
@@ -129,8 +129,8 @@
         "title": "42nd Annual Arkansas RV show",
         "description": "Browse dozens of recreational vehicles in a range of shapes, sizes, and styles",
         "location": "Statehouse Convention Center",
-        "latitude": 49.49,
-        "longitude": 59.23,
+        "latitude": 42.208611,
+        "longitude": 100.445833,
         "hours": {
             "openHour": 12,
             "closeHour": 12
@@ -171,8 +171,8 @@
         "title": "Midwestern Herb and Garden Show",
         "description": "Vendors with garden relatitudeed crafts and wares. ",
         "location": "Times Square Mall in Mount Vernon",
-        "latitude": 49.49,
-        "longitude": 59.23,
+        "latitude": 30.908611,
+        "longitude": -97.545833,
         "hours": {
             "openHour": 10,
             "closeHour": 9

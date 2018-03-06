@@ -14,9 +14,11 @@ describe('Check if population was successful', () => {
 	});
 
 	describe('Food', () => {
-		it('should equal the 5 we created', () => {
+		it('should equal the 5 we created', (done) => {
 			Food.find((err, food) => {
+				if (err) { done(err); }
 				assert.equal(food.length, 5);
+				done();
 			});
 		});
 	});
